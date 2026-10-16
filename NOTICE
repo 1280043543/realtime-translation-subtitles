@@ -1,0 +1,21 @@
+实时翻译字幕 / Realtime Translation Subtitles
+Copyright 2026 1280043543 contributors.
+
+Standalone desktop client extracted and adapted on 2026-10-17 from:
+https://github.com/1280043543/Qwen3-ASR
+branch codex/local-caption-desktop, commit b44a6aa9870e256dc16342f5b433ec97dd558adc.
+Changes include standalone project layout, product naming, installation/startup
+scripts, dependency metadata, packaging and license documentation.
+
+Qwen3-ASR upstream:
+https://github.com/QwenLM/Qwen3-ASR
+Copyright 2026 Alibaba Cloud. Licensed under Apache License 2.0.
+The ASR implementation is installed separately as the qwen-asr Python package.
+No model weights are included in this source distribution.
+
+Qwen3-ASR-0.6B and Qwen3-4B-Instruct-2507 are provided by the Qwen team.
+Their model cards identify Apache-2.0 licensing. The translation model is used
+through Ollama's qwen3:4b-instruct-2507-q4_K_M distribution.
+Model license texts and source references accompany this project.
+
+Names of upstream projects identify their origins and do not imply endorsement.

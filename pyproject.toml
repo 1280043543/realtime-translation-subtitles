@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=77", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "realtime-translation-subtitles"
+version = "0.1.0"
+description = "实时翻译字幕：Windows 本地识别、翻译与悬浮字幕"
+readme = "README.md"
+requires-python = ">=3.11,<3.13"
+license = "Apache-2.0"
+license-files = ["LICENSE", "NOTICE", "licenses/*.txt"]
+authors = [{name = "1280043543"}]
+dependencies = [
+  "numpy==1.26.4",
+  "PySide6==6.12.0",
+  "requests==2.34.2",
+  "soundcard==0.4.6",
+  "torch==2.6.0",
+  "torchaudio==2.6.0",
+  "qwen-asr==0.0.6",
+]
+
+[project.optional-dependencies]
+setup = ["modelscope==1.40.2"]
+
+[project.urls]
+Repository = "https://github.com/1280043543/realtime-translation-subtitles"
+
+[tool.setuptools.packages.find]
+include = ["qwen_local_subtitles*"]
+
+[tool.setuptools.package-data]
+qwen_local_subtitles = ["assets/*.png", "assets/*.ico", "assets/*.svg", "assets/*.md"]

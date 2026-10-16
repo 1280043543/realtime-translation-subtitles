@@ -1,0 +1,7 @@
+include README.md DEVELOPMENT.md THIRD_PARTY_NOTICES.md LICENSE NOTICE
+include *.cmd *.ps1 launch.pyw models.json
+recursive-include licenses *.txt
+recursive-include scripts *.py
+recursive-include tests *.py
+recursive-include design *.png
+recursive-include qwen_local_subtitles/assets *.png *.ico *.svg *.md

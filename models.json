@@ -1,0 +1,17 @@
+{
+  "checked_on": "2026-10-17",
+  "asr": {
+    "id": "Qwen/Qwen3-ASR-0.6B",
+    "source": "https://modelscope.cn/models/Qwen/Qwen3-ASR-0.6B",
+    "model_card": "https://huggingface.co/Qwen/Qwen3-ASR-0.6B",
+    "local_directory": ".models/Qwen3-ASR-0.6B",
+    "license": "Apache-2.0"
+  },
+  "translation": {
+    "id": "Qwen/Qwen3-4B-Instruct-2507",
+    "ollama_tag": "qwen3:4b-instruct-2507-q4_K_M",
+    "source": "https://ollama.com/library/qwen3:4b-instruct-2507-q4_K_M",
+    "model_card": "https://huggingface.co/Qwen/Qwen3-4B-Instruct-2507",
+    "license": "Apache-2.0"
+  }
+}
