@@ -17,4 +17,4 @@ for name in ('README.md', 'DEVELOPMENT.md', 'THIRD_PARTY_NOTICES.md', 'LICENSE',
 shutil.copy2(ROOT / 'installer/online-install.ps1', STAGE / 'online-install.ps1')
 shutil.copy2(ROOT / 'installer/online-install.cmd', STAGE / 'online-install.cmd')
 subprocess.run([str(ROOT / 'build/tools/inno/ISCC.exe'), f'/DSource={STAGE}', str(ROOT / 'installer/online.iss')], check=True)
-print(ROOT / 'dist/windows-online/RealtimeTranslationSubtitles-0.2.0-Online-Setup.exe')
+print(ROOT / 'dist/windows-online/RealtimeTranslationSubtitles-1.0.0-Online-Setup.exe')

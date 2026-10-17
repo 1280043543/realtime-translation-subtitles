@@ -49,6 +49,6 @@ py -3.12 -m venv .venv
   --site-packages .\.venv\Lib\site-packages
 ```
 
-输出为 `dist/windows/RealtimeTranslationSubtitles-0.2.0-Setup.exe` 和 SHA-256 校验文件。安装包内的 Python、Ollama 和第三方依赖许可证会写入 `licenses/`；模型权重不随安装包分发。
+输出为 `dist/windows/RealtimeTranslationSubtitles-1.0.0-Setup.exe` 和 SHA-256 校验文件。安装包内的 Python、Ollama 和第三方依赖许可证会写入 `licenses/`；模型权重不随安装包分发。
 
 原始客户端来自用户的 Qwen3-ASR fork，来源提交和本次独立化修改记录见 `NOTICE`。本项目不内嵌上游 ASR 训练代码，通过官方 `qwen-asr` 包提供识别能力。

@@ -29,13 +29,12 @@
 ### 环境准备
 
 - Windows 64 位环境。
-- **64 位 Python 3.11 或 3.12**：[官方下载](https://www.python.org/downloads/windows/)。不要直接用其他 Python 版本替代。
-- **Ollama**：[Windows 官方下载](https://ollama.com/download/windows/)，需要单独安装。
+- 在线安装程序会自动下载 64 位 Python 3.11、Ollama 和项目依赖，不需要手动安装。
 - 首次安装需要联网下载依赖和模型，并预留数 GB 下载及磁盘空间。推荐 NVIDIA 显卡；CPU 也可运行，但较慢。
 
 ### 安装步骤
 
-1. 从 [Releases](https://github.com/1280043543/realtime-translation-subtitles/releases) 下载 `RealtimeTranslationSubtitles-0.2.0-Online-Setup.exe` 并运行。
+1. 从 [Releases](https://github.com/1280043543/realtime-translation-subtitles/releases) 下载 `RealtimeTranslationSubtitles-1.0.0-Online-Setup.exe` 并运行。
 2. 安装程序会自动下载 Python、Ollama 和项目依赖；随后首次启动会从 Qwen 官方 ModelScope 模型库下载 ASR 模型，并通过本机 Ollama 下载翻译模型。整个过程需要联网和数 GB 磁盘空间。
 3. 安装完成后，从桌面或开始菜单的“实时翻译字幕”快捷方式启动。
 

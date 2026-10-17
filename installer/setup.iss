@@ -4,7 +4,7 @@
 [Setup]
 AppId={{01510D49-8462-432E-91B9-BE1D90A20126}
 AppName=实时翻译字幕
-AppVersion=0.2.0
+AppVersion=1.0.0
 AppPublisher=1280043543
 AppPublisherURL=https://github.com/1280043543/realtime-translation-subtitles
 DefaultDirName={localappdata}\Programs\RealtimeTranslationSubtitles
@@ -18,7 +18,7 @@ SetupIconFile={#Payload}\qwen_local_subtitles\assets\app-icon.ico
 UninstallDisplayIcon={app}\qwen_local_subtitles\assets\app-icon.ico
 LicenseFile={#Payload}\LICENSE
 OutputDir=..\dist\windows
-OutputBaseFilename=RealtimeTranslationSubtitles-0.2.0-Setup
+OutputBaseFilename=RealtimeTranslationSubtitles-1.0.0-Setup
 Compression=lzma2/fast
 SolidCompression=yes
 DiskSpanning=yes

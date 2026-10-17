@@ -84,7 +84,7 @@ def main():
     # Original shared libraries and all distribution license files stay in place.
     run(args.iscc, f"/DPayload={stage}", ROOT / "installer/setup.iss")
     output = ROOT / "dist/windows"
-    files = sorted(output.glob("RealtimeTranslationSubtitles-0.2.0-Setup*"))
+    files = sorted(output.glob("RealtimeTranslationSubtitles-1.0.0-Setup*"))
     checksums = []
     for path in files:
         digest = hashlib.file_digest(path.open("rb"), "sha256").hexdigest()

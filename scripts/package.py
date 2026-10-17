@@ -21,7 +21,7 @@ def distribution_files(root: Path) -> list[Path]:
 def main() -> None:
     output = ROOT / "dist"
     output.mkdir(exist_ok=True)
-    archive = output / "realtime-translation-subtitles-v0.1.0-source.zip"
+    archive = output / "realtime-translation-subtitles-v1.0.0-source.zip"
     with zipfile.ZipFile(archive, "w", compression=zipfile.ZIP_DEFLATED) as package:
         for path in distribution_files(ROOT):
             package.write(path, arcname="实时翻译字幕/" + path.relative_to(ROOT).as_posix())
