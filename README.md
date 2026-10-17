@@ -35,15 +35,15 @@
 
 ### 安装步骤
 
-1. 从 [Releases](https://github.com/1280043543/realtime-translation-subtitles/releases) 下载 `realtime-translation-subtitles-v0.1.0-source.zip`，**完整解压到可写目录**，不要直接在压缩包中启动。
-2. 双击根目录 **`安装.cmd`**，等待安装完成。脚本会创建项目内的 `.venv`，安装依赖，从 Qwen 官方 ModelScope 模型库下载 ASR 模型，并通过本机 Ollama 下载翻译模型。
-3. 安装完成后，会创建“实时翻译字幕”的桌面和开始菜单快捷方式。
+1. 从 [Releases](https://github.com/1280043543/realtime-translation-subtitles/releases) 下载 `RealtimeTranslationSubtitles-0.2.0-Online-Setup.exe` 并运行。
+2. 安装程序会自动下载 Python、Ollama 和项目依赖；随后首次启动会从 Qwen 官方 ModelScope 模型库下载 ASR 模型，并通过本机 Ollama 下载翻译模型。整个过程需要联网和数 GB 磁盘空间。
+3. 安装完成后，从桌面或开始菜单的“实时翻译字幕”快捷方式启动。
 
 安装脚本检测到可用的 `nvidia-smi` 时安装 CUDA 12.6 版 PyTorch，否则安装 CPU 版；使用 NVIDIA 加速需要兼容的驱动。若找不到 Python、需要指定 Python 路径或强制 CPU 安装，请查看 [手动安装说明](DEVELOPMENT.md)。
 
-> 当前下载包是**源码安装包，不是独立 EXE 或完整离线包**，不内含 Python、Ollama、第三方运行库或模型权重。普通使用者请选择 ZIP；`.whl` 是开发者使用的 Python 包。
+> 在线安装包只包含安装程序和客户端源码，Python、Ollama、第三方运行库及模型会在安装过程中从各自官方来源下载。没有网络时可按 [开发说明](DEVELOPMENT.md) 使用源码安装流程。
 
-项目同时提供 Windows 标准安装包的构建配置：安装包会内置 Python、项目依赖和官方 Ollama 独立运行组件，首次启动时再下载模型。当前 GitHub Release 仍以源码 ZIP 为准；安装包生成流程见 [开发说明](DEVELOPMENT.md)。
+项目同时提供完整离线安装包的构建配置；由于体积约数 GB，默认 Release 使用在线安装包。离线包生成流程见 [开发说明](DEVELOPMENT.md)。
 
 ## 4. 使用方法
 
