@@ -505,7 +505,7 @@ class MainWindow(QMainWindow):
 
 def main() -> None:
     set_process_app_id()
-    app = QApplication(sys.argv)
+    app = QApplication.instance() or QApplication(sys.argv)
     app.setStyle("Fusion")
     app.setFont(QFont("Microsoft YaHei UI", 10))
     app.setWindowIcon(QIcon(str(ASSET_DIR / "app-icon.ico")))

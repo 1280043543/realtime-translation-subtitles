@@ -38,4 +38,17 @@ py -3.12 -m venv .venv
 
 `dist/` 中的 ZIP 是**源码安装包**，不是内含 Python、依赖和模型的独立 EXE。首次安装需要联网；用户音频和字幕不上传到模型服务商。
 
+### 构建 Windows 标准安装包
+
+标准安装包使用官方 Python 3.11 x64 embeddable runtime、项目依赖和 Ollama Windows 独立组件；模型仍在首次启动时从官方来源下载。准备好 Inno Setup 6、官方 `ollama-windows-amd64.zip`（或同等已解压目录）后，在 Python 3.11 x64 环境执行：
+
+```powershell
+.\.venv\Scripts\python.exe scripts\build_windows.py `
+  --iscc "C:\Program Files (x86)\Inno Setup 6\ISCC.exe" `
+  --ollama .\build\ollama-official `
+  --site-packages .\.venv\Lib\site-packages
+```
+
+输出为 `dist/windows/RealtimeTranslationSubtitles-0.2.0-Setup.exe` 和 SHA-256 校验文件。安装包内的 Python、Ollama 和第三方依赖许可证会写入 `licenses/`；模型权重不随安装包分发。
+
 原始客户端来自用户的 Qwen3-ASR fork，来源提交和本次独立化修改记录见 `NOTICE`。本项目不内嵌上游 ASR 训练代码，通过官方 `qwen-asr` 包提供识别能力。

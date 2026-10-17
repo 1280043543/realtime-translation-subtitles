@@ -13,7 +13,8 @@ def ensure_ollama(log_dir: Path) -> None:
             return
     except OSError:
         pass
-    executable = shutil.which("ollama")
+    bundled = Path(__file__).resolve().parent.parent / "runtime/ollama/ollama.exe"
+    executable = str(bundled) if bundled.is_file() else shutil.which("ollama")
     if not executable:
         candidate = Path(os.environ.get("LOCALAPPDATA", "")) / "Programs/Ollama/ollama.exe"
         if candidate.is_file():
@@ -21,9 +22,13 @@ def ensure_ollama(log_dir: Path) -> None:
     if not executable:
         raise RuntimeError("请先从 https://ollama.com/download/windows 安装 Ollama。")
     log_dir.mkdir(parents=True, exist_ok=True)
+    environment = os.environ.copy()
+    if bundled.is_file():
+        environment["OLLAMA_MODELS"] = str(bundled.parents[2] / ".models/ollama")
+        environment["OLLAMA_HOST"] = "127.0.0.1:11434"
     with (log_dir / "ollama.log").open("a", encoding="utf-8") as log:
         subprocess.Popen([executable, "serve"], stdout=log, stderr=log,
-                         creationflags=subprocess.CREATE_NO_WINDOW)
+                         env=environment, creationflags=subprocess.CREATE_NO_WINDOW)
     for _ in range(40):
         time.sleep(0.25)
         try:
